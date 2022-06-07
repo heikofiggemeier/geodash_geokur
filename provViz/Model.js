@@ -45,8 +45,7 @@ class Model {
     async get_node_description(node) {
         let select = [
             'SELECT ?description WHERE {',
-            'OPTIONAL {<' + node + '> ?predicate ?definition. }',
-            'FILTER (?predicate = rdfs:comment || ?predicate = skos:definition || ?predicate = dct:description)',
+            'OPTIONAL {<' + node + '> dct:description ?description. }',
             '}'
         ]
         select = this.prefixes.concat(select).join(' ');
@@ -70,9 +69,7 @@ class Model {
         let node_class = []
         for (let binding of response.results.bindings) {
             if (binding.class) node_class.push(binding.class.value)
-
         }
-
         return node_class;
     }
 
