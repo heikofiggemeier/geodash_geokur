@@ -9,10 +9,10 @@
 <body style="font-family: 'Open Sans';font-size: 13px;">
 	<div>
 		<input type="checkbox" id="l5" onclick="choose(this)"> <label
-			for="landsat5">Landsat 5</label> <input type="checkbox" id="l6"
-			onclick="choose(this)"> <label for="landsat6">Landsat
-			6</label> <input type="checkbox" id="l7" onclick="choose(this)"> <label
-			for="landsat7">Landsat 7</label>
+			for="landsat5">Dataset A</label> <input type="checkbox" id="l6"
+			onclick="choose(this)"> <label for="landsat6">Dataset 
+			B</label> <input type="checkbox" id="l7" onclick="choose(this)"> <label
+			for="landsat7">Dataset C</label>
 	</div>
 	<fieldset>
 		<div>
@@ -43,39 +43,39 @@
 	//define data and labels for each Dataset/Quality Metric comination
 	var sat5om = {
 		y : [ 0.1, 0.4, 1 ],
-		name : 'Landsat 5',
+		name : 'Dataset A',
 		marker : {
-			color : '#65d348'
+			color : '#a1240b'
 		},
 		type : 'box'
 	};
 	var sat5com = {
 		y : [ 1, 0.5, 2 ],
-		name : 'Landsat 5',
+		name : 'Dataset A',
 		marker : {
-			color : '#65d348'
+			color : '#a1240b'
 		},
 		type : 'box'
 	};
 	var sat5qaa = {
 		y : [ 0.5, 0.1, 0.3, 0.8 ],
-		name : 'Landsat 5',
+		name : 'Dataset A',
 		marker : {
-			color : '#65d348'
+			color : '#a1240b'
 		},
 		type : 'box'
 	};
 	var sat5tcc = {
 		y : [ 0.1, 1, 0.7 ],
-		name : 'Landsat 5',
+		name : 'Dataset A',
 		marker : {
-			color : '#65d348'
+			color : '#a1240b'
 		},
 		type : 'box'
 	};
 	var sat6om = {
 		y : [ 0.8, 1, 0.25 ],
-		name : 'Landsat 6',
+		name : 'Dataset B',
 		marker : {
 			color : '#f17a2d'
 		},
@@ -83,7 +83,7 @@
 	};
 	var sat6com = {
 		y : [ 1, 0.4, 0.2, 0.9, 0.4 ],
-		name : 'Landsat 6',
+		name : 'Dataset B',
 		marker : {
 			color : '#f17a2d'
 		},
@@ -91,7 +91,7 @@
 	};
 	var sat6qaa = {
 		y : [ 0.3, 0.21, 0.34, 0.89 ],
-		name : 'Landsat 6',
+		name : 'Dataset B',
 		marker : {
 			color : '#f17a2d'
 		},
@@ -99,7 +99,7 @@
 	};
 	var sat6tcc = {
 		y : [ 0.3, 1, 0.6, 0.2, 0.4 ],
-		name : 'Landsat 6',
+		name : 'Dataset B',
 		marker : {
 			color : '#f17a2d'
 		},
@@ -107,7 +107,7 @@
 	};
 	var sat7om = {
 		y : [ 1, 0.5, 0.7 ],
-		name : 'Landsat 7',
+		name : 'Dataset C',
 		marker : {
 			color : '#2e78f1'
 		},
@@ -115,7 +115,7 @@
 	};
 	var sat7com = {
 		y : [ 0.2, 0.4 ],
-		name : 'Landsat 7',
+		name : 'Dataset C',
 		marker : {
 			color : '#2e78f1'
 		},
@@ -123,7 +123,7 @@
 	};
 	var sat7qaa = {
 		y : [ 0.9, 1, 0.1 ],
-		name : 'Landsat 7',
+		name : 'Dataset C',
 		marker : {
 			color : '#2e78f1'
 		},
@@ -131,7 +131,7 @@
 	};
 	var sat7tcc = {
 		y : [ 0.1, 0.2, 0.5, 1, 0.7 ],
-		name : 'Landsat 7',
+		name : 'Dataset C',
 		marker : {
 			color : '#2e78f1'
 		},

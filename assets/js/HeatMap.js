@@ -4,19 +4,19 @@ var yValues = []; //will get Dataset labels
 
 var zValues = []; //will get Dataset values
 
-var z5 = []; //Dataset array for Landsat 5
+var z5 = []; //Dataset array for Dataset A
 var z5om = 7;
 var z5com = 78;
 var z5qaa = 95;
 var z5tcc = 99;
 
-var z6 = []; //Dataset array for Landsat 6
+var z6 = []; //Dataset array for Dataset B
 var z6om = 68;
 var z6com = 51;
 var z6qaa = 70;
 var z6tcc = 36;
 
-var z7 = []; //Dataset array for Landsat 7
+var z7 = []; //Dataset array for Dataset C
 var z7om = 92;
 var z7com = 5;
 var z7qaa = 45;
@@ -302,13 +302,13 @@ function chooseD(e) {
 	if (document.getElementById("l5").checked && zValues.includes(z5) == false) {
 
 		layout.annotations = [];
-		yValues.push('Landsat 5');
+		yValues.push('Dataset A');
 		zValues.push(z5);
 
 	} else if (document.getElementById("l5").checked == false && zValues.includes(z5) == true) {
 
 		layout.annotations = [];
-		var del1 = yValues.indexOf('Landsat 5');
+		var del1 = yValues.indexOf('Dataset A');
 		var del2 = zValues.indexOf(z5);
 		yValues.splice(del1, 1);
 		zValues.splice(del2, 1);
@@ -316,13 +316,13 @@ function chooseD(e) {
 	} else if (document.getElementById("l6").checked && zValues.includes(z6) == false) {
 
 		layout.annotations = [];
-		yValues.push('Landsat 6');
+		yValues.push('Dataset B');
 		zValues.push(z6);
 
 	} else if (document.getElementById("l6").checked == false && zValues.includes(z6) == true) {
 
 		layout.annotations = [];
-		var del1 = yValues.indexOf('Landsat 6');
+		var del1 = yValues.indexOf('Dataset B');
 		var del2 = zValues.indexOf(z6);
 		yValues.splice(del1, 1);
 		zValues.splice(del2, 1);
@@ -330,13 +330,13 @@ function chooseD(e) {
 	} else if (document.getElementById("l7").checked && zValues.includes(z7) == false) {
 
 		layout.annotations = [];
-		yValues.push('Landsat 7');
+		yValues.push('Dataset C');
 		zValues.push(z7);
 
 	} else if (document.getElementById("l7").checked == false && zValues.includes(z7) == true) {
 
 		layout.annotations = [];
-		var del1 = yValues.indexOf('Landsat 7');
+		var del1 = yValues.indexOf('Dataset C');
 		var del2 = zValues.indexOf(z7);
 		yValues.splice(del1, 1);
 		zValues.splice(del2, 1);
