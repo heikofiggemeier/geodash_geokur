@@ -2,32 +2,61 @@
 <html lang="en">
 
 <head>
-    <!--Load plotly.js into the DOM -->
-    <script src='https://cdn.plot.ly/plotly-2.9.0.min.js'></script>
-    <script src='assets/js/HeatMap.js'></script>
-    <link href="assets/css/HeatMap.css" rel="stylesheet">
-    <meta charset="utf-8" />
+<!--Load plotly.js into the DOM -->
+<script src='https://cdn.plot.ly/plotly-2.9.0.min.js'></script>
+<script src='assets/js/HeatMap.js'></script>
+<link href="assets/css/HeatMap.css" rel="stylesheet">
+<meta charset="utf-8" />
+
 </head>
 
-<body style="font-family: 'Open Sans';font-size: 13px;">
-    <div> <input type="checkbox" id="l5" onclick="chooseD(this)"> <label for="landsat5">Dataset A</label> <input
-            type="checkbox" id="l6" onclick="chooseD(this)"> <label for="landsat6">Dataset B</label> <input
-            type="checkbox" id="l7" onclick="chooseD(this)"> <label for="landsat7">Dataset C</label> </div>
-    <fieldset>
-        <div> <input type="checkbox" id="om" name="Quality Metric" value="Omission" onclick="chooseQ(this)"> <label
-                for="om"> Omission</label> </div>
-        <div> <input type="checkbox" id="com" name="Quality Metric" value="Commission" onclick="chooseQ(this)"> <label
-                for="com"> Commission</label></div>
-        <div> <input type="checkbox" id="qaa" name="Quality Metric" value="Quantitative attribute accuracy"
-                onclick="chooseQ(this)"> <label for="qaa"> Quantitative attribute accuracy</label></div>
-        <div> <input type="checkbox" id="tcc" name="Quality Metric" value="Thematic classification correctness"
-                onclick="chooseQ(this)"> <label for="tcc"> Thematic classification correctness</label></div>
-    </fieldset>
-    <div class="container"> <a class="btn-hm btn-1" onclick="colorchange(this)">Color 1</a> <a class="btn-hm btn-2"
-            onclick="colorchange(this)">Color 2</a> <a class="btn-hm btn-3" onclick="colorchange(this)">Color 3</a> </div>
-    <div id='myDiv'>
-        <!-- Plotly chart will be drawn inside this DIV -->
-    </div>
+<body style="font-family: 'Open Sans'; font-size: 13px;">
+	<div>
+		<input type="checkbox" id="l5" onclick="chooseD(this)"> <label
+			for="landsat5">Dataset A</label> <input type="checkbox" id="l6"
+			onclick="chooseD(this)"> <label for="landsat6">DatasetB</label>
+		<input type="checkbox" id="l7" onclick="chooseD(this)"> <label
+			for="landsat7">Dataset C</label>
+	</div>
+	<fieldset>
+		<div>
+			<input type="checkbox" id="om" name="Quality Metric" value="Omission"
+				onclick="chooseQ(this)"> <label for="om"> Omission</label>
+		</div>
+		<div>
+			<input type="checkbox" id="com" name="Quality Metric"
+				value="Commission" onclick="chooseQ(this)"> <label for="com">
+				Commission</label>
+		</div>
+		<div>
+			<input type="checkbox" id="qaa" name="Quality Metric"
+				value="Quantitative attribute accuracy" onclick="chooseQ(this)">
+			<label for="qaa"> Quantitative attribute accuracy</label>
+		</div>
+		<div>
+			<input type="checkbox" id="tcc" name="Quality Metric"
+				value="Thematic classification correctness" onclick="chooseQ(this)">
+			<label for="tcc"> Thematic classification correctness</label>
+		</div>
+	</fieldset>
+	<div class="container">
+		<a class="btn-hm btn-1" onclick="colorchange(this)">Color 1</a> <a
+			class="btn-hm btn-2" onclick="colorchange(this)">Color 2</a> <a
+			class="btn-hm btn-3" onclick="colorchange(this)">Color 3</a>
+	</div>
+	<div id='myDiv'>
+		<!-- Plotly chart will be drawn inside this DIV -->
+	</div>
+	<form>
+		<div data-role="rangeslider">
+
+			<input type="range" name="range-1a" id="range-1a" min="0" max="100"
+				value="40" data-popup-enabled="true" data-show-value="true">
+
+			<input type="range" name="range-1b" id="range-1b" min="0" max="100"
+				value="80" data-popup-enabled="true" data-show-value="true">
+		</div>
+	</form>
 </body>
 
 </html>
