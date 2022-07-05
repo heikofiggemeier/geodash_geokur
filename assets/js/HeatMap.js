@@ -1,8 +1,16 @@
+var values1a = [30];
+var value1a = 0;
+var values1b = [70];
+var value1b = 0;
+
+
 var xValues = []; //will get Quality Metrix labels
 
 var yValues = []; //will get Dataset labels
 
 var zValues = []; //will get Dataset values
+
+
 
 var z5 = []; //Dataset array for Dataset A
 var z5om = 7;
@@ -104,16 +112,6 @@ var layout = {
 
 var checked = '';
 
- var mySlider = new rSlider({
-        target: '#sampleSlider',
-        values: [2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015],
-        range: true,
-        tooltip: true,
-        scale: true,
-        labels: true,
-        set: [2010, 2013]
-    });
-
 //add a checked-effect to the gradient buttons by changing css style
 function colorchange(b) {
 
@@ -183,8 +181,42 @@ function colorchange(b) {
 	Plotly.newPlot('myDiv', data, layout);
 }
 
+
+// get slider values
+function rangevalue() {
+
+	values1a.push(document.getElementById("range-1a").value);
+	values1b.push(document.getElementById("range-1b").value);
+
+
+	if (values1a.length > 2) {
+		values1a.splice(0, 1);
+
+	}
+	if (values1a[values1a.length - 1] != values1a[values1a.length - 2]) {
+		value1a = values1a[values1a.length - 1];
+		console.log(value1a);
+
+
+	}
+	if (values1b.length > 2) {
+		values1b.splice(0, 1);
+
+	}
+	if (values1b[values1b.length - 1] != values1b[values1b.length - 2]) {
+		value1b = values1b[values1b.length - 1];
+		console.log(value1b);
+	}
+
+return value1a;
+}
+
+
+
+
 //add data to the Dataset arrays and x-axis labels depending on selected Quality Metric buttons
 function chooseQ(c) {
+	
 	if (document.getElementById("om").checked &&
 		(z5.includes(z5om) == false && z6.includes(z6om) == false && z7.includes(z7om) == false)) {
 
