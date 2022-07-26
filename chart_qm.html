@@ -9,7 +9,22 @@
 
 </head>
 
-<body style="font-family: 'Open Sans'; font-size: 13px;">
+<body style="font-family: 'Open Sans'; font-size: 13px; width: 97%">
+	<div class="values">
+		<span id=range1> 0 </span> <span> - </span> <span id=range2>
+			100 </span>
+	</div>
+	<div class="wrapper">
+
+		<form>
+				<div class="slider-track" id="slider-track"></div>
+				<input type="range" id="range-a" min="0" max="100" value="0"
+					oninput="rangevalue1()"> <input type="range" id="range-b"
+					min="0" max="100" value="100" oninput="rangevalue2()">
+			
+		</form>
+	</div>
+
 	<div>
 		<input type="checkbox" id="l5" onclick="chooseD(this)"> <label
 			for="landsat5">Dataset A</label> <input type="checkbox" id="l6"
@@ -38,14 +53,16 @@
 			<label for="tcc"> Thematic classification correctness</label>
 		</div>
 	</fieldset>
-	<div class="container">
-		<a class="btn-hm btn-1" onclick="colorchange(this)">Color 1</a> <a
-			class="btn-hm btn-2" onclick="colorchange(this)">Color 2</a> <a
-			class="btn-hm btn-3" onclick="colorchange(this)">Color 3</a>
-	</div>
+
+	<a class="btn-hm btn-1" onclick="colorchange(this)">Color 1</a>
+	<a class="btn-hm btn-2" onclick="colorchange(this)">Color 2</a>
+	<a class="btn-hm btn-3" onclick="colorchange(this)">Color 3</a>
+
 	<div id='myDiv'>
 		<!-- Plotly chart will be drawn inside this DIV -->
 	</div>
+	
+	<!--needs to be down here to access all elements in the js file-->
+	<script src='assets/js/HeatMap.js'></script>
 </body>
-
 </html>
